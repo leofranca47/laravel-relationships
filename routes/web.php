@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OneToManyController;
 use App\Http\Controllers\OneToOneController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/oneToOne', [OneToOneController::class, 'oneToOne'])->name('onetoOne.oneToOne');
+Route::get('/oneToOneInverse', [OneToOneController::class, 'oneToOneInverse'])->name('onetoOne.oneToOneInverse');
+Route::get('/oneToOneInsert', [OneToOneController::class, 'oneToOneInsert'])->name('onetoOne.oneToOneInsert');
+
+Route::get('/oneToMany', [OneToManyController::class, 'oneToMany'])->name('oneToMany.OneToMany');

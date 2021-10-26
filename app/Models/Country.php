@@ -9,6 +9,10 @@ class Country extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name'
+    ];
+
     public function location()
     {
        return $this->hasOne(Location::class);
