@@ -23,4 +23,6 @@ Route::get('/oneToOne', [OneToOneController::class, 'oneToOne'])->name('onetoOne
 Route::get('/oneToOneInverse', [OneToOneController::class, 'oneToOneInverse'])->name('onetoOne.oneToOneInverse');
 Route::get('/oneToOneInsert', [OneToOneController::class, 'oneToOneInsert'])->name('onetoOne.oneToOneInsert');
 
-Route::get('/oneToMany', [OneToManyController::class, 'oneToMany'])->name('oneToMany.OneToMany');
+Route::get('/oneToMany', [OneToManyController::class, 'oneToMany'])->name('oneToMany.oneToMany');
+Route::get('/manyToOne', [OneToManyController::class, 'manyToOne'])->name('oneToMany.manyToOne');
+Route::get('/oneToManyTwo', [OneToManyController::class, 'oneToManyTwo'])->name('oneToMany.oneToManyTwo');
