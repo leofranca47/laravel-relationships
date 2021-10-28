@@ -26,3 +26,6 @@ Route::get('/oneToOneInsert', [OneToOneController::class, 'oneToOneInsert'])->na
 Route::get('/oneToMany', [OneToManyController::class, 'oneToMany'])->name('oneToMany.oneToMany');
 Route::get('/manyToOne', [OneToManyController::class, 'manyToOne'])->name('oneToMany.manyToOne');
 Route::get('/oneToManyTwo', [OneToManyController::class, 'oneToManyTwo'])->name('oneToMany.oneToManyTwo');
+Route::get('/onToManyInsert', [OneToManyController::class, 'onToManyInsert'])->name('oneToMany.onToManyInsert');
+
+Route::get('/hasmanyThrough', [OneToManyController::class, 'hasmanyThrough'])->name('oneToMany.hasmanyThrough');
