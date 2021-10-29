@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ManyToManyController;
 use App\Http\Controllers\OneToManyController;
 use App\Http\Controllers\OneToOneController;
 use Illuminate\Support\Facades\Route;
@@ -29,3 +30,7 @@ Route::get('/oneToManyTwo', [OneToManyController::class, 'oneToManyTwo'])->name(
 Route::get('/onToManyInsert', [OneToManyController::class, 'onToManyInsert'])->name('oneToMany.onToManyInsert');
 
 Route::get('/hasmanyThrough', [OneToManyController::class, 'hasmanyThrough'])->name('oneToMany.hasmanyThrough');
+
+Route::get('/manyToMany', [ManyToManyController::class, 'manyToMany'])->name('oneToMany.manyToMany');
+Route::get('/manyToManyInverse', [ManyToManyController::class, 'manyToManyInverse'])->name('oneToMany.manyToManyInverse');
+Route::get('/manyToManyInsert', [ManyToManyController::class, 'manyToManyInsert'])->name('oneToMany.manyToManyInsert');

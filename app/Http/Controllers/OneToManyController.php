@@ -50,12 +50,11 @@ class OneToManyController extends Controller
     public function onToManyInsert()
     {
         $dataForm = [
-            'name' => 'espirito santo',
-            'initial' => 'ES',
+            'name' => 'santa catarina',
+            'initial' => 'sc',
         ];
 
-        $country = Country::find(1);
-
+        $country = Country::with(['states', 'cities'])->whereId(1)->first();
         $state = $country->states()->create($dataForm);
 
         echo $state;
