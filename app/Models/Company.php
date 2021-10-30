@@ -13,4 +13,9 @@ class Company extends Model
     {
         return $this->belongsToMany(City::class, 'company_city');
     }
+
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentable');
+    }
 }

@@ -3,6 +3,7 @@
 use App\Http\Controllers\ManyToManyController;
 use App\Http\Controllers\OneToManyController;
 use App\Http\Controllers\OneToOneController;
+use App\Http\Controllers\PolymorphicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,3 +35,6 @@ Route::get('/hasmanyThrough', [OneToManyController::class, 'hasmanyThrough'])->n
 Route::get('/manyToMany', [ManyToManyController::class, 'manyToMany'])->name('oneToMany.manyToMany');
 Route::get('/manyToManyInverse', [ManyToManyController::class, 'manyToManyInverse'])->name('oneToMany.manyToManyInverse');
 Route::get('/manyToManyInsert', [ManyToManyController::class, 'manyToManyInsert'])->name('oneToMany.manyToManyInsert');
+
+Route::get('/polymorphic', [PolymorphicController::class, 'polymorphic'])->name('polymorphic.polymorphic');
+Route::get('/polymorphicInsert', [PolymorphicController::class, 'polymorphicInsert'])->name('polymorphic.polymorphicInsert');
